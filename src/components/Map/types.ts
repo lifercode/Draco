@@ -1,5 +1,3 @@
-import { MapType } from '../Game/types'
-
 export type ScreenTypes = {
   width: number,
   height: number,
@@ -11,7 +9,7 @@ export type LayerProps = {
 }
 
 export type TileProps = {
-  value: number,
+  value: string,
   tileSize: number,
 }
 

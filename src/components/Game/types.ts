@@ -5,7 +5,7 @@ export type ScreenType = {
 }
 
 export type MapType = {
-  layers: number[][][],
+  layers: string[][][],
   name: string
 }
 

@@ -16,16 +16,16 @@ const Map = () => {
 
   const { layers } = state.setup.map
 
-  const getRows = (value: number[][]) => {
+  const getRows = (value: string[][]) => {
     return value.slice(camera.y, screen.height+camera.y)
   }
 
-  const getCols = (value: number[]) => {
+  const getCols = (value: string[]) => {
     return value.slice(camera.x, screen.width+camera.x)
   }
 
-  const renderTiles = (tiles: number[], index: number) => {
-    const handleTileCLick = (tile: number, tileIndex: number) => {
+  const renderTiles = (tiles: string[], index: number) => {
+    const handleTileCLick = (tile: string, tileIndex: number) => {
       const y = index + camera.y
       const x = tileIndex + camera.x
 
@@ -44,7 +44,7 @@ const Map = () => {
     )
   }
 
-  const renderLayer = (layer: number[][]) => (
+  const renderLayer = (layer: string[][]) => (
     getRows(layer).map((tiles, index) =>
       renderTiles(tiles, index)
     )
