@@ -15,6 +15,9 @@ const zz = TILE_IMG.DEFAULT
 
 const map = {
   name: 'small',
+  doors: [
+    { x: 12, y: 4, target: 'primary' }
+  ],
   layers: [
     [
       [zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz],

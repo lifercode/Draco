@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useContext } from 'react'
 
 import useEventListener from '../../hooks/useEventListener'
-import { primary, small } from '../../constants/map'
+import { maps } from '../../constants/map'
 import { context } from '../../store'
 import { ACTION } from '../../constants/actions'
 
@@ -9,9 +9,6 @@ const Controls = () => {
   const globalState = useContext(context)
   const { state, dispatch } = globalState
   const { setup, playerPosition } = state
-
-  const maxY = setup.map.layers[0].length - setup.screen.height
-  const maxX = setup.map.layers[0][0].length - setup.screen.width
 
   const handler = useCallback(
     (e: any) => {
@@ -31,15 +28,25 @@ const Controls = () => {
 
   const verifyPosition = useCallback(
     () => {
-      if (setup.map.name === 'small' && playerPosition.x === maxX && playerPosition.y === maxY) {
-        dispatch({ type: ACTION.CHANGE_MAP, payload: { map: primary } })
-      }
-  
-      if (setup.map.name === 'primary' && playerPosition.x === maxX && playerPosition.y === maxY) {
-        dispatch({ type: ACTION.CHANGE_MAP, payload: { map: small } })
-      }
+      setup.map.doors.map((door) => {
+        const isDoorPosition = playerPosition.x === door.x - 1
+          && playerPosition.y === door.y - 1
+
+        if (isDoorPosition) {
+          dispatch({
+            type: ACTION.CHANGE_MAP,
+            payload: {
+              map: maps.filter(
+                ({ name }) => name === door.target
+              )[0]
+            }
+          })
+        }
+
+        return ''
+      })
     },
-    [dispatch, maxX, maxY, playerPosition.x, playerPosition.y, setup]
+    [dispatch, playerPosition.x, playerPosition.y, setup]
   )
 
   useEffect(() => {

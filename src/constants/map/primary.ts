@@ -16,6 +16,9 @@ const zz = TILE_IMG.DEFAULT
 
 const map = {
   name: 'primary',
+  doors: [
+    { x: 5, y: 1, target: 'small' }
+  ],
   layers: [
     [
       [zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz],
@@ -61,7 +64,7 @@ const map = {
       [a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2],
       [a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4],
       [a1,a2,a1,a2,a1,a2,a1,a2,a5,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a7,a1,a2,a1,a2,a1,a2,a1,a2],
-      [a3,a4,a3,a4,a3,a4,a3,a4,a8,zz,zz,zz,zz,zz,b3,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,a8,a3,a4,a3,a4,a3,a4,a3,a4],
+      [a3,a4,a3,a4,a3,a4,a3,a4,a8,zz,zz,zz,zz,b2,b3,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,a8,a3,a4,a3,a4,a3,a4,a3,a4],
       [a1,a2,a1,a2,a1,a2,a1,a2,a8,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,a8,a1,a2,a1,a2,a1,a2,a1,a2],
       [a3,a4,a3,a4,a3,a4,a3,a4,a8,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,a8,a3,a4,a3,a4,a3,a4,a3,a4],
       [a1,a2,a1,a2,a1,a2,a1,a2,a8,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,a8,a1,a2,a1,a2,a1,a2,a1,a2],
@@ -74,7 +77,7 @@ const map = {
       [a3,a4,a3,a4,a3,a4,a3,a4,a8,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,a8,a3,a4,a3,a4,a3,a4,a3,a4],
       [a1,a2,a1,a2,a1,a2,a1,a2,a8,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,b3,zz,zz,zz,zz,zz,zz,zz,zz,zz,b3,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,a8,a1,a2,a1,a2,a1,a2,a1,a2],
       [a3,a4,a3,a4,a3,a4,a3,a4,a8,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,a8,a3,a4,a3,a4,a3,a4,a3,a4],
-      [a1,a2,a1,a2,a1,a2,a1,a2,a8,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,b2,a8,a1,a2,a1,a2,a1,a2,a1,a2],
+      [a1,a2,a1,a2,a1,a2,a1,a2,a8,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,zz,a8,a1,a2,a1,a2,a1,a2,a1,a2],
       [a3,a4,a3,a4,a3,a4,a3,a4,a9,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,a6,b1,a3,a4,a3,a4,a3,a4,a3,a4],
       [a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2,a1,a2],
       [a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4,a3,a4],

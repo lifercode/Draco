@@ -6,9 +6,15 @@ const map = {
   small
 }
 
+export const maps = [
+  primary,
+  small
+]
+
 export {
   primary,
   small
 }
+
 
 export default map

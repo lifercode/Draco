@@ -4,9 +4,16 @@ export type ScreenType = {
   tileSize: number
 }
 
+export type DoorType = {
+  x: number,
+  y: number,
+  target: string
+}
+
 export type MapType = {
   layers: string[][][],
-  name: string
+  name: string,
+  doors: DoorType[]
 }
 
 export type SetupType = {

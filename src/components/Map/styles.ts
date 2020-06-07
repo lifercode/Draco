@@ -31,14 +31,9 @@ export const Layer = styled.div`
 `
 
 export const Tile = styled.div`
-  cursor: pointer;
   float: left;
   width: ${({ tileSize }: TileProps) => tileSize}px;
   height: ${({ tileSize }: TileProps) => tileSize}px;
   background-image: url(${require('../../assets/images/base.png')});
   background-position: ${({ value }: TileProps) => value};
-
-  &:hover {
-    box-shadow: inset 0 0 10px #fff;
-  }
 `
