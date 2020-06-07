@@ -10,7 +10,6 @@ type PlayerPositionType = {
 }
 
 type StateType = {
-  hello: string,
   playerPosition: PlayerPositionType,
   setup: SetupType,
 }
@@ -21,7 +20,6 @@ type ContextType = {
 }
 
 const INITIAL_STATE = {
-  hello: 'world',
   playerPosition: {
     x: 0,
     y: 0
